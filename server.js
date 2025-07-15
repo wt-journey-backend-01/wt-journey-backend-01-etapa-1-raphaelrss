@@ -1,6 +1,5 @@
 const express = require('express');
 const path = require('path');
-const bodyParser = require('body-parser');
 const ejs = require('ejs');
 
 const app = express();
@@ -8,8 +7,8 @@ const PORT = 3000;
 
 const lanches = require('./public/data/lanches.json');
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 
 app.set('view engine', 'html');
 app.engine('html', ejs.renderFile);
