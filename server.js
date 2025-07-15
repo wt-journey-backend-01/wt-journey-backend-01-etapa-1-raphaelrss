@@ -21,7 +21,8 @@ app.get('/', (req, res) => {
 
 app.get('/sugestao', (req, res) => {
     const data = {
-        nome: req.query.nome
+        nome: req.query.nome,
+        ingredientes: req.query.ingredientes
     }
     res.render('sugestao_recebida.html', data);
 });
@@ -32,7 +33,10 @@ app.get('/contato', (req, res) => {
 
 app.post('/contato', (req, res) => {
     const data = {
-        nome: req.body.nome
+        nome: req.body.nome,
+        email: req.body.email,
+        assunto: req.body.assunto,
+        mensagem: req.body.mensagem
     }
     res.render('contato_recebido.html', data);
 });
