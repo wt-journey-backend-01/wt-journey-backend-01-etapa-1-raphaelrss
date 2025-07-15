@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+</head>
+<body>
+    <p>Envie sua mensagem para nós.</p>
+    <form action="/contato" method="post">
+        <div>
+            <label for="nome">Nome</label>
+            <input type="text" name="nome">
+            <label for="email">Email</label>
+            <input type="email" name="email">
+            <label for="assunto">Assunto</label>
+            <input type="text" name="assunto">
+            <label for="mensagem">Mensagem</label>
+            <textarea name="mensagem"></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
